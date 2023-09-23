@@ -42,6 +42,14 @@ function soChan(arr) {
   return soChan;
 }
 
+//sắp xếp
+function sapXep(arr) {
+  var ketqua = arr.sort((a, b) => {
+    return a - b;
+  });
+  return ketqua;
+}
+
 //thay đổi số trong mảng
 function changeNum(arr, indexChange, indexNew) {
   var iChange = indexChange;

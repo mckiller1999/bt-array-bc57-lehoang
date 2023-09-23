@@ -66,11 +66,9 @@ document.querySelector("#btnKetQuaChange").onclick = function (a) {
 
 document.querySelector("#btnKetQuaSapXep").onclick = function (a) {
   a.preventDefault();
-  var ketqua = arrNumber.sort((a, b) => {
-    return a - b;
-  });
+  var output = sapXep(arrNumber);
   document.querySelector("#ketQuaSapXep").innerHTML =
-    "mảng sau khi sắp xếp: " + ketqua;
+    "mảng sau khi sắp xếp: " + output;
 };
 
 //8:kiểm tra Snt
