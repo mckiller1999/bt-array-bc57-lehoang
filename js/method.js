@@ -71,21 +71,28 @@ function changeNum(arr, indexChange, indexNew) {
 //tìm số nguyên tố trong mảng
 
 //kiểm tra SNT
-function soNt(arr) {
-  arr = arr.filter((x) => x >= 0);
+function checkSnt(n) {
+  if (n < 2) {
+    return false;
+  }
+
+  for (var i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+//duyệt qua vòng lặp mảng
+function logSnt(arr) {
   for (var i = 0; i < arr.length; i++) {
-    if (
-      (arr[i] > 1 &&
-        arr[i] % arr[i] === 0 &&
-        arr[i] % 2 !== 0 &&
-        arr[i] % 3 !== 0 &&
-        arr[i] % Math.sqrt(arr[i]) !== 0) ||
-      arr[i] === 2 ||
-      arr[i] === 3
-    ) {
+    if (checkSnt(arr[i]) == true) {
       return arr[i];
     }
   }
+
   return -1;
 }
 

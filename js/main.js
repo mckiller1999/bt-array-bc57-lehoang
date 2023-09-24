@@ -75,7 +75,7 @@ document.querySelector("#btnKetQuaSapXep").onclick = function (a) {
 
 document.querySelector("#btnCheck").onclick = function (a) {
   a.preventDefault();
-  var check = soNt(arrNumber);
+  var check = logSnt(arrNumber);
 
   document.querySelector("#CheckSnt").innerHTML =
     "số nguyên tố đầu tiên trong mảng là:" + check;
