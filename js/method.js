@@ -73,13 +73,17 @@ function changeNum(arr, indexChange, indexNew) {
 //tìm số nguyên tố trong mảng
 
 //kiểm tra SNT
-function soNt(n) {
-  for (var i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false;
+function soNt(arr) {
+  arr = arr.filter((x) => x >= 0);
+  for (var i = 0; i < arr.length; i++) {
+    if (
+      (arr[i] > 1 && arr[i] % arr[i] === 0 && arr[i] % 2 !== 0) ||
+      arr[i] === 2
+    ) {
+      return arr[i];
     }
   }
-  return true;
+  return -1;
 }
 
 //tổng số ngyên trong mảng
