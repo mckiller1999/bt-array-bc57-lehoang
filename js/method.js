@@ -35,8 +35,6 @@ function soChan(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 == 0) {
       soChan = arr[i];
-    } else {
-      soChan = -1;
     }
   }
   return soChan;
