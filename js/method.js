@@ -77,7 +77,10 @@ function soNt(arr) {
   arr = arr.filter((x) => x >= 0);
   for (var i = 0; i < arr.length; i++) {
     if (
-      (arr[i] > 1 && arr[i] % arr[i] === 0 && arr[i] % 2 !== 0) ||
+      (arr[i] > 1 &&
+        arr[i] % arr[i] === 0 &&
+        arr[i] % 2 !== 0 &&
+        arr[i] % Math.sqrt(arr[i]) !== 0) ||
       arr[i] === 2
     ) {
       return arr[i];
