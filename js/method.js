@@ -80,6 +80,7 @@ function soNt(arr) {
       (arr[i] > 1 &&
         arr[i] % arr[i] === 0 &&
         arr[i] % 2 !== 0 &&
+        arr[i] % 3 !== 0 &&
         arr[i] % Math.sqrt(arr[i]) !== 0) ||
       arr[i] === 2
     ) {
